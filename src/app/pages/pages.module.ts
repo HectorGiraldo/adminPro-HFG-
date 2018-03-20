@@ -12,10 +12,12 @@ import { ChartsModule } from 'ng2-charts';
 // Rutas
 import { PAGES_ROUTES } from './pages.routes';
 
+// Componentes
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Grafico1Component } from './grafico1/grafico1.component';
 import { PagesComponent } from './pages.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 // Temporal
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
@@ -32,7 +34,8 @@ import { GraficoDonasComponent } from '../components/grafico-donas/grafico-donas
     ProgressComponent,
     Grafico1Component,
     IncrementadorComponent,
-    GraficoDonasComponent
+    GraficoDonasComponent,
+    AccountSettingsComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Grafico1Component],
   imports: [SharedModule, PAGES_ROUTES, FormsModule, ChartsModule]
