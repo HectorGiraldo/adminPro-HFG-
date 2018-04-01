@@ -22,6 +22,8 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 // Temporal
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonasComponent } from '../components/grafico-donas/grafico-donas.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 
@@ -35,7 +37,9 @@ import { GraficoDonasComponent } from '../components/grafico-donas/grafico-donas
     Grafico1Component,
     IncrementadorComponent,
     GraficoDonasComponent,
-    AccountSettingsComponent
+    AccountSettingsComponent,
+    PromesasComponent,
+    RxjsComponent
   ],
   exports: [DashboardComponent, ProgressComponent, Grafico1Component],
   imports: [SharedModule, PAGES_ROUTES, FormsModule, ChartsModule]
