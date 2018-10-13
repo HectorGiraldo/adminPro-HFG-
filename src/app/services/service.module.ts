@@ -7,10 +7,13 @@ import {
   SharedService,
   SidebarService,
   UsuarioService,
+  HospitalService,
   LoginGuardGuard,
-  SubirArchivosService
+  SubirArchivosService,
+  MedicoService
 } from './service.index';
 import { ModalUploadService } from '../components/modal-upload/modal-upload.service';
+
 
 @NgModule({
   imports: [
@@ -22,9 +25,11 @@ import { ModalUploadService } from '../components/modal-upload/modal-upload.serv
     SharedService,
     SidebarService,
     UsuarioService,
+    HospitalService,
     LoginGuardGuard,
     SubirArchivosService,
-    ModalUploadService
+    ModalUploadService,
+    MedicoService
   ],
   declarations: []
 })

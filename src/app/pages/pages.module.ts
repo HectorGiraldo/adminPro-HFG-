@@ -33,6 +33,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 // Modal Upload
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 
 
@@ -53,7 +54,8 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
     UsuariosComponent,
     MedicosComponent,
     HospitalesComponent,
-    ModalUploadComponent
+    ModalUploadComponent,
+    MedicoComponent
   ],
 
   exports: [

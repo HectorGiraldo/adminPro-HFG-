@@ -14,6 +14,8 @@ import { MedicosComponent } from './medicos/medicos.component';
 import { HospitalesComponent } from './hospitales/hospitales.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { LoginGuardGuard } from '../services/service.index';
+import { MedicoComponent } from './medicos/medico.component';
+
 
 const pagesRoutes: Routes = [
   {
@@ -32,6 +34,7 @@ const pagesRoutes: Routes = [
       // Mantenimientos
       { path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Mantenimiento de Usuarios'}},
       { path: 'medicos', component: MedicosComponent, data: { titulo: 'Mantenimiento de Medicos'}},
+      { path: 'medico/:id', component: MedicoComponent, data: { titulo: 'Actualizar Medico'}},
       { path: 'hospitales', component: HospitalesComponent, data: { titulo: 'Mantenimiento de Hospitales'}},
       { path: '', pathMatch: 'full', redirectTo: '/dashboard' }
     ]
