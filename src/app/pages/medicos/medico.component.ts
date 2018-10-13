@@ -36,7 +36,7 @@ export class MedicoComponent implements OnInit {
 
   ngOnInit() {
     this._hospitalService.cargarHospital()
-      .subscribe(hospitales => this.hospitales = hospitales);
+      .subscribe((resp: any) => this.hospitales = resp.hospitales);
 
     this._modalUploadService.notificacion
          .subscribe(resp => {
