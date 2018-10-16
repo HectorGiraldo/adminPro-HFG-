@@ -9,6 +9,7 @@ import {
   UsuarioService,
   HospitalService,
   LoginGuardGuard,
+  AdminGuard,
   SubirArchivosService,
   MedicoService
 } from './service.index';
@@ -27,6 +28,7 @@ import { ModalUploadService } from '../components/modal-upload/modal-upload.serv
     UsuarioService,
     HospitalService,
     LoginGuardGuard,
+    AdminGuard,
     SubirArchivosService,
     ModalUploadService,
     MedicoService
