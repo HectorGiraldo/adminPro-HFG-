@@ -4,6 +4,10 @@ import { HospitalService } from '../../services/service.index';
 import swal from 'sweetalert2';
 import { ModalUploadService } from '../../components/modal-upload/modal-upload.service';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
 =======
 
 >>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
@@ -30,6 +34,7 @@ export class HospitalesComponent implements OnInit {
 
     this._modalUploadService.notificacion
 <<<<<<< HEAD
+<<<<<<< HEAD
       .subscribe(resp => this.cargarHospital());
   }
 
@@ -42,6 +47,9 @@ export class HospitalesComponent implements OnInit {
   cargarHospital() {
     this._hospitalService.cargarHospital()
         .subscribe(hospitales => this.hospitales = hospitales);
+=======
+        .subscribe( resp => this.cargarHospital());
+>>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
 =======
         .subscribe( resp => this.cargarHospital());
 >>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
@@ -66,6 +74,7 @@ export class HospitalesComponent implements OnInit {
   buscarHospital(termino: string) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
   borrarHospital(hospital: Hospital) {
@@ -75,6 +84,8 @@ export class HospitalesComponent implements OnInit {
     this._hospitalService.actualizarHospital(hospital)
       .subscribe();
 =======
+=======
+>>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
     if (termino.length <= 0) {
         this.cargarHospital();
         return;
@@ -136,6 +147,9 @@ export class HospitalesComponent implements OnInit {
 
   actualizarImagen( hospital: Hospital ) {
     this._modalUploadService.mostrarModal( 'hospitales', hospital._id );
+<<<<<<< HEAD
+>>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
+=======
 >>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
   }
 

@@ -17,8 +17,13 @@ export { SettingService } from './settings/setting.service';
 export { SharedService } from './shared/shared.service';
 export { SidebarService } from './shared/sidebar.service';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { UsuarioService } from './usuario/usuario.service';
 export { HospitalService } from './hospital/hospital.service';
+=======
+
+
+>>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
 =======
 
 
