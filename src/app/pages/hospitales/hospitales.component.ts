@@ -3,6 +3,10 @@ import { Hospital } from '../../models/hospital.model';
 import { HospitalService } from '../../services/service.index';
 import swal from 'sweetalert2';
 import { ModalUploadService } from '../../components/modal-upload/modal-upload.service';
+<<<<<<< HEAD
+=======
+
+>>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
 
 @Component({
   selector: 'app-hospitales',
@@ -25,6 +29,7 @@ export class HospitalesComponent implements OnInit {
     this.cargarHospital();
 
     this._modalUploadService.notificacion
+<<<<<<< HEAD
       .subscribe(resp => this.cargarHospital());
   }
 
@@ -37,6 +42,9 @@ export class HospitalesComponent implements OnInit {
   cargarHospital() {
     this._hospitalService.cargarHospital()
         .subscribe(hospitales => this.hospitales = hospitales);
+=======
+        .subscribe( resp => this.cargarHospital());
+>>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
   }
 
   cambiarDesde(valor: number) {
@@ -57,6 +65,7 @@ export class HospitalesComponent implements OnInit {
 
   buscarHospital(termino: string) {
 
+<<<<<<< HEAD
   }
 
   borrarHospital(hospital: Hospital) {
@@ -65,6 +74,69 @@ export class HospitalesComponent implements OnInit {
   actualizarHospital(hospital: Hospital) {
     this._hospitalService.actualizarHospital(hospital)
       .subscribe();
+=======
+    if (termino.length <= 0) {
+        this.cargarHospital();
+        return;
+    }
+
+    this._hospitalService.buscarHospital(termino)
+        .subscribe( hospitales => this.hospitales = hospitales );
+  }
+
+  cargarHospital() {
+    this.cargando = true;
+    this._hospitalService.cargarHospital(this.desde)
+        .subscribe( (resp: any) => {
+           this.hospitales = resp.hospitales;
+           this.totalRegistros = resp.total;
+           this.cargando = false;
+          } );
+
+  }
+
+  crearHospital() {
+
+    swal({
+      title: 'Crear Hospital',
+      text: 'Ingrese el nombre del hospital',
+      input: 'text',
+      type: 'info',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      cancelButtonText: 'Cancelar',
+      confirmButtonText: 'Crear!'
+    }).then(result => {
+      if (!result.value || result.value.length === 0) {
+        return;
+      } else {
+        swal(
+          'Hospital Creado!',
+          'Tu has creado un nuevo hospital.',
+          'success'
+        );
+        this._hospitalService.crearHospital(result.value)
+            .subscribe(() => this.cargarHospital());
+      }
+    });
+
+  }
+
+  actualizarHospital( hospital: Hospital) {
+    this._hospitalService.actualizarHospital(hospital)
+        .subscribe(() => this.cargarHospital());
+
+  }
+
+  borrarHospital ( hospital: Hospital) {
+    this._hospitalService.borrarHospital(hospital._id)
+        .subscribe(() => this.cargarHospital());
+  }
+
+  actualizarImagen( hospital: Hospital ) {
+    this._modalUploadService.mostrarModal( 'hospitales', hospital._id );
+>>>>>>> c1b8ee14df700760764eeb17282826bb3913e574
   }
 
   

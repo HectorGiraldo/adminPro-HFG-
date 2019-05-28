@@ -33,6 +33,8 @@ import { ProfileComponent } from './profile/profile.component';
 
 // Modal Upload
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { MedicoComponent } from './medicos/medico.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
 
@@ -40,7 +42,7 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 
 @NgModule({
   declarations: [
-    PagesComponent,
+    // PagesComponent,
     DashboardComponent,
     ProgressComponent,
     Grafico1Component,
@@ -53,7 +55,9 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
     UsuariosComponent,
     MedicosComponent,
     HospitalesComponent,
-    ModalUploadComponent
+    // ModalUploadComponent,
+    MedicoComponent,
+    BusquedaComponent
   ],
 
   exports: [
